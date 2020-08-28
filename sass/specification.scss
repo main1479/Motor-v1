@@ -1,0 +1,157 @@
+.specification{
+    padding: 10rem 0 7rem 0;
+
+
+    .content__grid{
+        grid-column: 3/11;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+        grid-gap: 7rem;
+        @media only screen and (max-width:$px575){
+            grid-column: 2/11;
+        }
+    }
+
+    .img__box{
+        position: relative;
+
+        h2{
+            font-size: 12vmax;
+            // line-height: 0;
+            // margin-top: 8rem; 
+            position: absolute;
+            width: 120%;
+            background: linear-gradient(rgba(#fff,.2), rgba($color-primary,.9)), url(../img/text-bg.png);
+            background-size: cover;
+            background-position: center;
+            background-clip: text;
+            -webkit-background-clip: text; 
+            -moz-background-clip: text;
+            color:transparent;
+            
+        }
+
+        img{
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            transform: translate(5%,15%);
+            @media only screen and (max-width:$px575){
+                width: 90%;
+                transform: translate(0,20%);
+            }
+        }
+    } 
+
+    .circle__grid{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        grid-gap: 4rem;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .circle__item{
+        position: relative;
+
+        .incomplete{
+            stroke:#777777;
+        }
+
+        &2{
+            svg{
+                transform: rotate(90deg);
+            }
+        }
+
+        &3{
+            svg{
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .circle__text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 1;
+        text-align: center;
+        span{
+            display: block;
+            text-transform: uppercase;
+            font-size: 2rem;
+            color:$color-primary;
+        }
+
+        .dib{
+            display: inline-block;
+            color:#fff;
+        }
+    }
+
+
+   
+
+}
+
+// ================================================
+// ================================================
+
+
+svg.radial-progress {
+    height: auto;
+    max-width: 200px;
+    padding: 1em;
+    transform: rotate(-90deg);
+    width: 100%;
+  }
+  
+  svg.radial-progress circle {
+    fill: rgba(0,0,0,0);
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129; /* Circumference */
+    stroke-width: 5;
+  }
+  
+  svg.radial-progress circle.incomplete { opacity: 0.25; }
+  
+  svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; /* Circumference */ }
+  
+  svg.radial-progress text {
+    fill: #fff;
+    font: 400 1em/1 'Oswald', sans-serif;
+    text-anchor: middle;
+  }
+  
+  /*** COLORS ***/
+  /* Primary */
+  
+  svg.radial-progress:nth-of-type(6n+1) circle { stroke: #fcb405; }
+  
+  /* Secondary */
+  
+  svg.radial-progress:nth-of-type(6n+2) circle { stroke: #83e4e2; }
+  
+  /* Tertiary */
+  
+  svg.radial-progress:nth-of-type(6n+3) circle { stroke: #fd6470; }
+  
+  /* Quaternary */
+  
+  svg.radial-progress:nth-of-type(6n+4) circle { stroke: #fca858; }
+  
+  /* Quinary */
+  
+  svg.radial-progress:nth-of-type(6n+5) circle { stroke: #fddc32; }
+
+
+
+
+
+
